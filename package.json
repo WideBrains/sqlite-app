@@ -1,0 +1,48 @@
+{
+  "name": "sqlite-app",
+  "version": "1.0.0",
+  "description": "Test SQLITE APP",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create-table": "sqlite3 test.db \"CREATE TABLE person (name TEXT NOT NULL, age INT NOT NULL);\"",
+    "rebuild": " electron-rebuild -f -w better-sqlite3",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "author": "Devansh",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron-forge/cli": "^7.4.0",
+    "@electron-forge/maker-deb": "^7.4.0",
+    "@electron-forge/maker-rpm": "^7.4.0",
+    "@electron-forge/maker-squirrel": "^7.4.0",
+    "@electron-forge/maker-zip": "^7.4.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.4.0",
+    "@electron-forge/plugin-fuses": "^7.4.0",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^31.1.0",
+    "electron-rebuild": "^3.2.9"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.1.2",
+    "electron-squirrel-startup": "^1.0.1",
+    "sqlite3": "^5.1.7"
+  },
+  "build": {
+    "appId": "sqlite.electron-test.app",
+    "productName": "SQLite Electron App",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*",
+      "public/**/*"
+    ],
+    "directories": {
+      "buildResources": "public"
+    },
+    "extraResources": [
+      "./test.db"
+    ]
+  }
+}

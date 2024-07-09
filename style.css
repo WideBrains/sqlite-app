@@ -1,0 +1,30 @@
+.main {
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.people-table{
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+label{
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: left; 
+}
+
+input {
+    display: inline-block;
+}
+
+form{
+    margin: 5%;
+}
+table, th, td{
+    border: 1px solid black;
+}

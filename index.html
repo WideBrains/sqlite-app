@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <link rel="stylesheet" href="style.css">
+    <title>Hello from Electron renderer!</title>
+</head>
+
+<body>
+    <div class="main">
+        <form id="person-form">
+            <label for="person-name">Name: </label>
+            <input id="person-name" name="person-name"><br><br>
+            <label for="person-age">Age: </label>
+            <input id="person-age" name="person-age" type="number"><br><br>
+            <button id="form-submit" value="Submit" type="button">Submit</button>
+        </form>
+    </div>
+    <table class="people-table" id="people-table">
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Age
+            </th>
+        </tr>
+    </table>
+</body>
+<script src="./index.js">
+</script>
+
+</html>
